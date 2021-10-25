@@ -1,0 +1,10 @@
+{
+    "Authentication": {
+        "ErrorMessage": "Not Authenticated",
+        "ErrorCode": 102
+    },
+    "InvalidInputData": {
+        "ErrorMessage": "Invalid input Data",
+        "ErrorCode": 302
+    }
+}

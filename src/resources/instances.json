@@ -1,0 +1,16 @@
+{
+  "ValidCredentials": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "titocarlos@gmail.com",
+      "password": "To#79119020#94"
+    }
+  },
+  "InvalidCredentials": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "bmvclwtcbeqsergdrp@pptrvv.com",
+      "password": "trol123!123456"
+    }
+  }
+}
