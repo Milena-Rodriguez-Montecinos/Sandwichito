@@ -1,7 +1,7 @@
-import HttpRequestManager from "../../src/common/api/http.request.manager";
-import endpointsList from "../../src/resources/endpoints.json"
-import errors from "../../src/resources/errors.json"
-import payloadList from "../../src/resources/payloads.json"
+import HttpRequestManager from "../../../src/common/api/http.request.manager";
+import endpointsList from "../../../src/resources/endpoints.json"
+import errors from "../../../src/resources/errors.json"
+import payloadList from "../../../src/resources/payloads.json"
 
 const projectsURI = endpointsList.endpoints.projects
 let projectByIdURI  = endpointsList.endpoints.projectById
