@@ -1,10 +1,10 @@
 import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json"
 import errors from "../../../src/resources/errors.json"
-import payloadList from "../../../src/resources/payloads.json"
+import payloadList from "../../../src/resources/payloads/payloads.project.json"
 
-const projectsURI = endpointsList.endpoints.projects
-let projectByIdURI  = endpointsList.endpoints.projectById
+const projectsURI = endpointsList.endpoints.project.projects
+let projectByIdURI  = endpointsList.endpoints.project.projectById
 let id = ''
 let postID = ''
 
