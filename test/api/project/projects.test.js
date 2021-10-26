@@ -37,7 +37,7 @@ describe("Project tests",() => {
 
     },5000)
 
-    test('Verify that I a 200 ok status code reuslt when a GET request to the "/projects.json" endpoint is executed', async()=>{
+    test('Verify that I a 200 ok status code result when a GET request to the "/projects.json" endpoint is executed', async()=>{
         await HttpRequestManager.makeRequest('GET',projectsURI)
         .then(function(response) {
             expect(response.status).toBe(200)
@@ -51,7 +51,7 @@ describe("Project tests",() => {
 
     },10000)
 
-    test('Verify that I a 200 ok status code reuslt when a POST request to the "/projects.json" endpoint is executed', async()=>{
+    test('Verify that I a 200 ok status code result when a POST request to the "/projects.json" endpoint is executed', async()=>{
         await HttpRequestManager.makeRequest('POST', projectsURI , payloadList.ProjectById.POST)
         .then(function(response) {
             //console.log(response.data)
@@ -67,7 +67,7 @@ describe("Project tests",() => {
 
     },5000)
 
-    test('Verify that I a 200 ok status code reuslt when a PUT request to the "/projects.json" endpoint is executed', async()=>{
+    test('Verify that I a 200 ok status code result when a PUT request to the "/projects.json" endpoint is executed', async()=>{
         await HttpRequestManager.makeRequest('PUT', projectByIdURI.replace('{id}',id) , payloadList.ProjectById.PUT)
         .then(function(response) {
             //console.log(response.data)
@@ -82,7 +82,7 @@ describe("Project tests",() => {
 
     },5000)
 
-    test('Verify that I a 200 ok status code reuslt when a DELETE request to the "/projects.json" endpoint is executed', async()=>{
+    test('Verify that I a 200 ok status code result when a DELETE request to the "/projects.json" endpoint is executed', async()=>{
         return HttpRequestManager.makeRequest('DELETE',projectByIdURI.replace('{id}',postID))
         .then(function(response) {
             expect(response.status).toBe(200)
