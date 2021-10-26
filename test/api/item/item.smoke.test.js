@@ -2,6 +2,7 @@ import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json";
 import errors from "../../../src/resources/errors.json";
 import payload from "../../../src/resources/payloads/payloads.items.json";
+import logger from "../../../src/utils/logger"
 
 const itemsURIID = endpointsList.endpoints.item.itemsById;
 const itemsURI = endpointsList.endpoints.item.items;
@@ -9,6 +10,7 @@ let afterPostId = "";
 let beforePostId = "";
 describe("smoke test from Items", () => {
     beforeAll(() => {
+        logger.info("SetUp done")
         return HttpRequestManager.makeRequest(
             "POST",
             itemsURI,
@@ -21,12 +23,13 @@ describe("smoke test from Items", () => {
                 beforePostId = response.data.Id;
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     }, 5000);
 
     afterAll(() => {
+        logger.info("TearDown done")
         return HttpRequestManager.makeRequest(
             "DELETE",
             itemsURIID.replace("{id}", afterPostId)
@@ -37,7 +40,7 @@ describe("smoke test from Items", () => {
                 expect(response.data).not.toEqual(errors.Authentication);
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     });
@@ -50,7 +53,7 @@ describe("smoke test from Items", () => {
                 expect(response.data).not.toEqual(errors.Authentication);
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     });
@@ -68,7 +71,7 @@ describe("smoke test from Items", () => {
                 afterPostId = response.data.Id
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     });
@@ -85,7 +88,7 @@ describe("smoke test from Items", () => {
                 expect(response.data).not.toEqual(errors.Authentication);
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     });
@@ -101,7 +104,7 @@ describe("smoke test from Items", () => {
                 expect(response.data).not.toEqual(errors.Authentication);
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     });
