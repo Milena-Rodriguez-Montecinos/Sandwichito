@@ -19,9 +19,9 @@ class HttpRequestManager {
             case "GET":
                 return instance.get(`${instance.defaults.baseURL}/api/${uri}`, instance.defaults.auth)
             case "POST":      
-                return instance.post(`${instance.defaults.baseURL}/api/${uri}`, data, instance.defaults.auth)          
+                return instance.post(`${instance.defaults.baseURL}/api/${uri}`, data ,instance.defaults.auth)          
             case "PUT":
-                return instance.put(`${instance.defaults.baseURL}/api/${uri}`, data, instance.defaults.auth)
+                return instance.put(`${instance.defaults.baseURL}/api/${uri}`, data ,instance.defaults.auth)
             case "DELETE":
                 return instance.delete(`${instance.defaults.baseURL}/api/${uri}`, instance.defaults.auth)
         }

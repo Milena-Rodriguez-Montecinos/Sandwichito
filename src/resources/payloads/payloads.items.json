@@ -1,0 +1,12 @@
+{
+    "ProjectById" : {
+        "POST" : {
+            "Content": "New Item example1543",
+            "ItemType": "1",
+            "Checked": "true"
+        },
+        "PUT" : {
+            "Checked": "false"
+        }
+    }
+}
