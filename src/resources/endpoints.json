@@ -1,6 +1,12 @@
 {
     "endpoints": {
-        "projects": "projects.json",
-        "projectById": "projects/{id}.json"
+        "project": {
+            "projects": "projects.json",
+            "projectById": "projects/{id}.json"
+        },
+        "user": {
+            "user": "user.json",
+            "userById": "/user/{id}.json"
+        }        
     }
 }
