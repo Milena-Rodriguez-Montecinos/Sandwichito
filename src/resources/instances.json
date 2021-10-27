@@ -6,6 +6,20 @@
       "password": "aeiou12345"
     }
   },
+  "ValidCredentialsTwo": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-two@email.com",
+      "password": "aeiou12345"
+    }
+  },
+  "ValidCredentialsThree": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-three@email.com",
+      "password": "aeiou12345"
+    }
+  },
   "InvalidCredentials": {
     "baseURL": "https://todo.ly",
     "auth": {

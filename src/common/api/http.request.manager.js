@@ -10,8 +10,14 @@ class HttpRequestManager {
             case false:
                 instance = axios.create(instances.InvalidCredentials);
                 break
-            default:
+            case true:
                 instance = axios.create(instances.ValidCredentials);
+                break
+            case 'user-two': 
+                instance = axios.create(instances.ValidCredentialsTwo);
+                break
+            case 'user-three':
+                instance = axios.create(instances.ValidCredentialsThree);
                 break
         }
 
@@ -26,7 +32,6 @@ class HttpRequestManager {
                 return instance.delete(`${instance.defaults.baseURL}/api/${uri}`, instance.defaults.auth)
         }
     }
-
 }
 
 export default HttpRequestManager
