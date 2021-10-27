@@ -1,0 +1,46 @@
+{
+    "Valid": {
+        "GET": {
+            "Id": 0,
+            "Content": "Inbox",
+            "ItemsCount": 1,
+            "Icon": 15,
+            "ItemType": 4,
+            "Children": []
+        }
+    },
+    "Invalid": {
+        "Content": {
+            "Empty": {
+                "Content": ""
+            }
+        },
+        "ProjectID": {
+            "NegativeNumber": {
+                "Content": "Item Automation Test",
+                "ProjectId": "-5"
+            },
+            "DecimalNumber": {
+                "Content": "Item Automation Test",
+                "ProjectId": "5.10"
+            },
+            "Words": {
+                "Content": "Item Automation Test",
+                "ProjectId": "Icon"
+            },
+            "Empty": {
+                "Content": "Item Automation Test",
+                "ProjectId": ""
+            },
+            "NonExistent" :{
+                "Content": "Item Automation Test",
+                "ProjectId": 456
+            }
+            ,
+            "Space" :{
+                "Content": "Item Automation Test",
+                "ProjectId": " "
+            }
+        }
+    }
+}

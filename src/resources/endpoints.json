@@ -11,6 +11,10 @@
         "item" : {
             "items": "items.json",
             "itemsById" : "items/{id}.json"
-        }        
+        },        
+        "filter" : {
+            "filters": "filters.json",
+            "filtersByID" : "filters/{id}.json"
+        }      
     }
 }
