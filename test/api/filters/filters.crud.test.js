@@ -45,12 +45,17 @@ describe("smoke test from Filters", () => {
             });
     });
 
-    test("Verify that a 200 OK status code result is given back when a GET request to the 'items/items.json' is sent", () => {
-        return HttpRequestManager.makeRequest("GET", filtersURI)
+    test("Verify returns the list of Done Items within the given filter when a GET request to the 'filter/filters.json' is sent", () => {
+        return HttpRequestManager.makeRequest(
+            "GET",
+            filtersURI,
+            payload.filtersByID.GET
+        )
             .then(function (response) {
                 expect(response.status).toBe(200);
                 expect(response.statusText).toMatch("OK");
                 expect(response.data).not.toEqual(errors.Authentication);
+                afterPostId = response.data.Id
             })
             .catch(function (error) {
                 logger.error(error);
