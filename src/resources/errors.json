@@ -23,4 +23,12 @@
         "ErrorMessage": "Account doesn't exist",
         "ErrorCode": 105
     }    
+    "InvalidProjectId": {
+        "ErrorMessage": "Invalid Project Id",
+        "ErrorCode": 304
+    },
+    "TooShortItemName": {
+        "ErrorMessage": "Too Short Item Name",
+        "ErrorCode": 308
+    }
 }

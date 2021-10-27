@@ -2,7 +2,6 @@
     "ProjectById": {
         "POST": {
             "Content": "My New Project",
-
             "Icon": "4"
         },
 
