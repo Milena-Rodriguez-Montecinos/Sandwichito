@@ -19,6 +19,12 @@ class HttpRequestManager {
             case 'user-three':
                 instance = axios.create(instances.ValidCredentialsThree);
                 break
+            case 'invalid-email':
+                instance = axios.create(instances.InvalidEmail);
+                break    
+            case 'invalid-pass':
+                instance = axios.create(instances.InvalidPassword);
+                break
         }
 
         switch(verb) {

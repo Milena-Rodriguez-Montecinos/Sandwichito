@@ -7,6 +7,22 @@
         "ErrorMessage": "Invalid input Data",
         "ErrorCode": 302
     },
+    "InvalidFullName": {
+        "ErrorMessage": "Invalid FullName",
+        "ErrorCode": 306
+    },
+    "InvalidEmailAddress": {
+        "ErrorMessage": "Invalid Email Address",
+        "ErrorCode": 307
+    },
+    "PasswordTooShort": {
+        "ErrorMessage": "Password too short",
+        "ErrorCode": 202
+    }, 
+    "NonExistentAccount": {
+        "ErrorMessage": "Account doesn't exist",
+        "ErrorCode": 105
+    }    
     "InvalidProjectId": {
         "ErrorMessage": "Invalid Project Id",
         "ErrorCode": 304
