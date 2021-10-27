@@ -1,5 +1,13 @@
 {
-    "Valid": {
+    "ProjectById": {
+        "POST": {
+            "Content": "New Item example for automation",
+            "ItemType": "1",
+            "Checked": "false"
+        },
+        "PUT": {
+            "Checked": "true"
+        },
         "GET": {
             "Id": 0,
             "Content": "Inbox",

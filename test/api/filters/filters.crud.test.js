@@ -1,7 +1,7 @@
 import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json";
 import errors from "../../../src/resources/errors.json";
-import payload from "../../../src/resources/payloads/payloads.items.json";
+import payload from "../../../src/resources/payloads/payloads.filters.json";
 import logger from "../../../src/utils/logger"
 
 const filtersURIID = endpointsList.endpoints.filter.filtersByID;
@@ -49,7 +49,7 @@ describe("smoke test from Filters", () => {
         return HttpRequestManager.makeRequest(
             "GET",
             filtersURI,
-            payload.filtersByID.GET
+            payload.ProjectById.GET
         )
             .then(function (response) {
                 expect(response.status).toBe(200);
