@@ -37,8 +37,16 @@
             "ErrorCode": 308                        
         },
         "NoAccessToItem": {
-            "ErrorMessage": "You don’t have access to this Item",
+            "ErrorMessage": "You don't have access to this Item",
             "ErrorCode": 309                                    
+        },
+        "NoAccessToParentProject":{
+            "ErrorMessage": "You don't have access to this ParentProject",
+            "ErrorCode": 401                                                
+        },
+        "NoAccessToProject":{
+            "ErrorMessage": "You don't have access to this Project",
+            "ErrorCode": 402                                                
         }         
     },
     "InvalidInputData": {

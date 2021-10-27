@@ -20,9 +20,9 @@ describe("Project tests",() => {
     test('Verify that I a 304 Invalid Project Id status code result when a GET request to the "projects/{id}.json" endpoint is executed', async()=>{
         await HttpRequestManager.makeRequest('GET',projectByIdURI.replace('{id}',id))
         .then(function(response) {
-            expect(response.status).toBe(errors.ErrorCode.InvalidProjectId.ErrorCode)
-            expect(response.statusText).toMatch(errors.ErrorCode.InvalidProjectId.ErrorMessage)
-            expect(response.data).not.toEqual(errors.Authentication)
+            expect(response.status).toBe(200)
+            expect(response.statusText).toMatch("OK")
+            expect(response.data).toEqual(errors.ErrorCode.NoAccessToProject)
         })
         .catch(function (error) {
             console.log(error)
