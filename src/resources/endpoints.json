@@ -7,6 +7,10 @@
         "users": {
             "user": "user.json",
             "userById": "user/{id}.json"
+        },
+        "item" : {
+            "items": "items.json",
+            "itemsById" : "items/{id}.json"
         }        
     }
 }
