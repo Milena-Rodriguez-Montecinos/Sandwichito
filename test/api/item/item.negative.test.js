@@ -26,7 +26,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
                 logger.error(error)
                 throw error;
             });
-    }, 5000);
+    }, 20000);
 
     afterAll(async () => {
         for (let id = 0; id < afterPostId.length; id++) {
@@ -58,7 +58,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
                 logger.error(error)
                 throw error;
             });
-    });
+    }, 20000);
 
     test("Verify that a non authorized user cannot create an Item", () => {
         return HttpRequestManager.makeRequest(
@@ -77,7 +77,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
                 logger.error(error)
                 throw error;
             });
-    });
+    }, 20000);
 
     test("Verify that an Item cannot be created with an empty name", () => {
         return HttpRequestManager.makeRequest(
@@ -95,7 +95,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
                 logger.error(error)
                 throw error;
             });
-    });
+    }, 20000);
 
     test("Verify that an Item cannot be changed with an empty name", () => {
         return HttpRequestManager.makeRequest(
@@ -113,7 +113,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
                 logger.error(error)
                 throw error;
             });
-    });
+    }, 20000);
 
     test.each`
         statusCode | statusText | key                 | statusTitle
@@ -134,7 +134,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
                 .then(function (response) {
                     expect(response.status).toBe(statusCode);
                     expect(response.statusText).toMatch(statusText);
-                    expect(response.data).toEqual(errors.InvalidProjectId);
+                    expect(response.data).toEqual(errors.InvalidInputData);
                 })
                 .catch(function (error) {
                     logger.error(error)
@@ -143,4 +143,33 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
         },
         20000
     );
+
+    test.each`
+    statusCode | statusText | key                 | statusTitle
+    ${200}     | ${"OK"}    | ${"NegativeNumber"} | ${"negative number"}
+    ${200}     | ${"OK"}    | ${"Words"}          | ${"a string"}
+    ${200}     | ${"OK"}    | ${"NonExistent"}    | ${"a non-existent"}
+    ${200}     | ${"OK"}    | ${"Empty"}          | ${"an empty"}
+    ${200}     | ${"OK"}    | ${"Space"}          | ${"just a space"}
+    ${200}     | ${"OK"}    | ${"DecimalNumber"}  | ${"a decimal"}
+`(
+    "Verify that an item is changed when a PUT request to the 'items/[id].json' is sent with $statusTitle value in 'ItemType' variable",
+    ({ statusCode, statusText, key }) => {
+        return HttpRequestManager.makeRequest(
+            "PUT",
+            itemsURIID.replace("{id}", beforePostId),
+            payload.Invalid.ItemType[key]
+        )
+            .then(function (response) {
+                expect(response.status).toBe(statusCode);
+                expect(response.statusText).toMatch(statusText);
+                expect(response.data).toEqual(errors.InvalidInputData);
+            })
+            .catch(function (error) {
+                logger.error(error)
+                throw error;
+            });
+    },
+    20000
+);
 });
