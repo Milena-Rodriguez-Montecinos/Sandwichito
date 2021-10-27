@@ -1,0 +1,32 @@
+{    
+    "Valid": {
+        "POST": {
+            "One": {
+                "Email": "sandwichito@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14",
+                "Password": "aeiou12345"
+            },
+            "Two": {
+                "Email": "sandwichito-two@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14 - Two",
+                "Password": "aeiou12345"
+            },
+            "Three": {
+                "Email": "sandwichito-three@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14 - Three",
+                "Password": "aeiou12345"
+            }            
+        },
+        "PUT": {
+            "FullName": "Los sandwichitos del AT-14",
+            "ListSortType": 2, 
+            "FirstDayOfWeek": 3
+        }
+    }, 
+    "Invalid": {
+        "POST": {
+            "FullName": "Los sandwichitos mas delis de AT-14",
+            "Password": "aeiou12345"
+        }
+    }    
+}
