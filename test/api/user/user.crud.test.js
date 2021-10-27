@@ -8,7 +8,7 @@ let userByIdURI  = endpointsList.endpoints.users.userById;
 let id = ''
 let postId = ''
 
-describe('User tests', () => {
+describe('User CRUD tests', () => {
     beforeAll(() => {
         return HttpRequestManager.makeRequest('POST', userURI, payloadList.Valid.POST.Two, 'user-two')
         .then(function(response) {

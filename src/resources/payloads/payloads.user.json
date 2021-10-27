@@ -25,8 +25,65 @@
     }, 
     "Invalid": {
         "POST": {
-            "FullName": "Los sandwichitos mas delis de AT-14",
-            "Password": "aeiou12345"
-        }
+            "NoEmail": {
+                "FullName": "Los sandwichitos mas delis de AT-14",
+                "Password": "aeiou12345"
+            },
+            "NoFullName": {
+                "Email": "sandwichito-two@email.com",                
+                "Password": "aeiou12345"
+            },
+            "NoPassword": {
+                "Email": "sandwichito-two@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14"
+            }
+        },
+        "PUT": {
+            "InvalidEmail": {
+                "Email": "sandwichito-two_email.com"
+            },
+            "EmptyEmail": {
+                "Email": ""
+            },
+            "SpaceEmail": {
+                "Email": " "
+            },
+            "EmptyPass": {
+                "Password": ""
+            },
+            "SpacePass": {
+                "Password": " "
+            },
+            "EmptyFullName": {
+                "FullName": ""
+            },
+            "SpaceFullName": {
+                "FullName": " "
+            },
+            "EmptyListSortType": {
+                "ListSortType": ""
+            },
+            "SpaceListSortType": {
+                "ListSortType": " "
+            },
+            "HighListSortType": {
+                "ListSortType": 4
+            },
+            "AlphanumericListSortType": {
+                "ListSortType": "aeiou123!"
+            },
+            "EmptyFirstDayOfWeek": {
+                "FirstDayOfWeek": ""
+            },
+            "SpaceFirstDayOfWeek": {
+                "FirstDayOfWeek": " "
+            },
+            "HighFirstDayOfWeek": {
+                "FirstDayOfWeek": 10
+            },
+            "AlphanumericFirstDayOfWeek": {
+                "FirstDayOfWeek": "aeiou123!"
+            }
+        }         
     }    
 }
