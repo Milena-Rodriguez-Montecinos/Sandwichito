@@ -1,12 +1,66 @@
 {
     "ProjectById": {
         "GET": {
-            "Id": 0,
-            "Content": "Inbox",
-            "ItemsCount": 1,
-            "Icon": 15,
-            "ItemType": 4,
-            "Children": []
+            "ID0": {
+                "Id": 0,
+                "Content": "Inbox",
+                "ItemsCount": 0,
+                "Icon": 15,
+                "ItemType": 4,
+                "Children": []
+            },
+            "ID1": {
+                "Id": -1,
+                "Content": "Today",
+                "ItemsCount": 0,
+                "Icon": 16,
+                "ItemType": 4,
+                "Children": []
+            },
+            "ID2": {
+                "Id": -5,
+                "Content": "Next",
+                "ItemsCount": 0,
+                "Icon": 20,
+                "ItemType": 4,
+                "Children": []
+            },
+            "ID3": {
+                "Id": -3,
+                "Content": "Recycle Bin",
+                "ItemsCount": 0,
+                "Icon": 18,
+                "ItemType": 4,
+                "Children": []
+            }
+        }
+    },
+    "Invalid": {
+        "Content": {
+            "Empty": {
+                "Content": ""
+            }
+        },
+        "ProjectID": {
+            "PositiveNumber": {
+                "Id": 5
+            },
+            "Words": {
+                "Id": "cinco"
+            },
+            "Empty": {
+                "Id": ""
+            },
+            "NonExistent" :{
+                "Id": -456
+            }
+            ,
+            "Space" :{
+                "Id": " "
+            },
+            "DecimalNumber" :{
+                "Id": "-0.1"
+            }
         }
     }
 }
