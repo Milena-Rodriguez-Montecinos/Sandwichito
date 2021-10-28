@@ -8,3 +8,4 @@ package-lock.json
 #files generated
 log-test.log
 test-report.html
+log-test-item.log

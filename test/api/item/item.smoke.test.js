@@ -2,7 +2,7 @@ import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json";
 import errors from "../../../src/resources/errors.json";
 import payload from "../../../src/resources/payloads/payloads.items.json";
-import logger from "../../../src/utils/logger";
+import logger from "../../../src/utils/logger/logger.items"
 
 const itemsURIID = endpointsList.endpoints.item.itemsById;
 const itemsURI = endpointsList.endpoints.item.items;
