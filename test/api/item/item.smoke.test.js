@@ -112,7 +112,7 @@ describe("smoke test from Items", () => {
     }, 20000);
 
     test("Verify that a 200 OK status code result is given back when a GET Root Item By child Id request to the 'items/items.json' is sent", () => {
-        return HttpRequestManager.makeRequest("GET", rootItem)
+        return HttpRequestManager.makeRequest("GET", rootItem.replace("{id}",afterPostId))
             .then(function (response) {
                 expect(response.status).toBe(200);
                 expect(response.statusText).toMatch("OK");
@@ -125,7 +125,7 @@ describe("smoke test from Items", () => {
     }, 20000);
 
     test("Verify that a 200 OK status code result is given back when a GET Done Root Item By child Id request to the 'items/items.json' is sent", () => {
-        return HttpRequestManager.makeRequest("GET", doneRootItem)
+        return HttpRequestManager.makeRequest("GET", doneRootItem.replace("{id}",afterPostId))
             .then(function (response) {
                 expect(response.status).toBe(200);
                 expect(response.statusText).toMatch("OK");

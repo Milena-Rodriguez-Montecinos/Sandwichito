@@ -60,58 +60,32 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
             });
     }, 20000);
 
-    test("Verify that a non authorized user cannot create an Item", () => {
-        return HttpRequestManager.makeRequest(
-            "POST",
-            itemsURI,
-            payload.ProjectById.POST,
-            false
-        )
-            .then(function (response) {
-                expect(response.status).toBe(200);
-                expect(response.statusText).toMatch("OK");
-                expect(response.data).toEqual(errors.Authentication);
-                afterPostId.push(response.data.Id);
-            })
-            .catch(function (error) {
-                logger.error(error)
-                throw error;
-            });
-    }, 20000);
-
-    test("Verify that get an error status code in the body when an Item 'Content' is created with an empty name", () => {
-        return HttpRequestManager.makeRequest(
-            "POST",
-            itemsURI,
-            payload.Invalid.Content.Empty
-        )
-            .then(function (response) {
-                expect(response.status).toBe(200);
-                expect(response.statusText).toMatch("OK");
-                expect(response.data).toEqual(errors.TooShortItemName);
-                afterPostId.push(response.data.Id);
-            })
-            .catch(function (error) {
-                logger.error(error)
-                throw error;
-            });
-    }, 20000);
-
-    test("Verify that get an error status code in the body when an Item 'Content' is changed with an empty name", () => {
+    test.each`
+    statusCode | statusText | key                 | statusTitle
+    ${200}     | ${"OK"}    | ${"NegativeNumber"} | ${"negative number"}
+    ${200}     | ${"OK"}    | ${"Words"}          | ${"a string"}
+    ${200}     | ${"OK"}    | ${"NonExistent"}    | ${"a non-existent"}
+    ${200}     | ${"OK"}    | ${"Empty"}          | ${"an empty"}
+    ${200}     | ${"OK"}    | ${"Space"}          | ${"just a space"}
+    ${200}     | ${"OK"}    | ${"DecimalNumber"}  | ${"a decimal"}
+`(
+    "Verify that I get a error status code when a PUT request to the 'items/[id].json' is sent with $statusTitle value in 'ItemType' variable",
+    ({ statusCode, statusText, key }) => {
         return HttpRequestManager.makeRequest(
             "PUT",
             itemsURIID.replace("{id}", beforePostId),
-            payload.Invalid.Content.Empty
+            payload.Invalid.ItemType[key]
         )
             .then(function (response) {
-                expect(response.status).toBe(200);
-                expect(response.statusText).toMatch("OK");
-                expect(response.data).toEqual(errors.TooShortItemName);
-                afterPostId.push(response.data.Id);
+                expect(response.status).toBe(statusCode);
+                expect(response.statusText).toMatch(statusText);
+                expect(response.data).toEqual(errors.InvalidInputData);
             })
             .catch(function (error) {
                 logger.error(error)
                 throw error;
             });
-    }, 20000);
+    },
+    20000
+);
 });
