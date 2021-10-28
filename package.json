@@ -6,6 +6,19 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+      "reporters": [
+          "default",
+          [
+              "./node_modules/jest-html-reporter",
+              {
+                  "pageTitle": "Test Report",
+                  "includeFailureMsg": true,
+                  "outputPath": "./test-report.html"
+              }
+          ]
+      ]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -14,6 +27,9 @@
     "@babel/preset-env": "^7.15.8",
     "@babel/register": "^7.15.3",
     "axios": "^0.23.0",
-    "jest": "^27.3.1"
-  }
+    "jest": "^27.3.1",
+    "jest-html-reporter": "^3.4.1",
+    "winston": "^3.3.3"
+  },
+  "dependencies": {}
 }
