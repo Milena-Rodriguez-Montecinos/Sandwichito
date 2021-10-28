@@ -1,33 +1,29 @@
 import axios from "axios"
 import instances from "../../resources/instances.json"
-import payload from "../../resources/payloads.json"
-
 
 class HttpRequestManager {
-
-    /*constructor() {
-        if(!creating) {
-            throw new Error('Cant create a new instance')
-        } 
-    }
-
-    static getInstance() {
-        if(!instance) {
-            creating = true;
-            instance = new HttpRequestManager();
-            creating = false;
-        }
-        return instance 
-    }*/
-    static makeRequest(verb,uri,data=``,isAuthValid=true) {
+   
+    static makeRequest(verb, uri, data = '', isAuthValid = true) {
         let instance = null
 
         switch(isAuthValid) {
             case false:
                 instance = axios.create(instances.InvalidCredentials);
                 break
-            default:
+            case true:
                 instance = axios.create(instances.ValidCredentials);
+                break
+            case 'user-two': 
+                instance = axios.create(instances.ValidCredentialsTwo);
+                break
+            case 'user-three':
+                instance = axios.create(instances.ValidCredentialsThree);
+                break
+            case 'invalid-email':
+                instance = axios.create(instances.InvalidEmail);
+                break    
+            case 'invalid-pass':
+                instance = axios.create(instances.InvalidPassword);
                 break
         }
 
@@ -43,7 +39,6 @@ class HttpRequestManager {
                 return instance.delete(`${instance.defaults.baseURL}/api/${uri}`, instance.defaults.auth)
         }
     }
-
 }
 
 export default HttpRequestManager

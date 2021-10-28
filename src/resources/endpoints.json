@@ -6,9 +6,15 @@
             "projectByIdItems": "projects/{id}/items.json",
             "projectByIdDoneItems": "projects/{id}/doneitems.json"
         },
-        "user": {
+        "users": {
             "user": "user.json",
-            "userById": "/user/{id}.json"
+            "userById": "user/{id}.json"
+        },
+        "item" : {
+            "items": "items.json",
+            "itemsById" : "items/{id}.json",
+            "DoneRootItem" : "items/{id}/DoneRootItem.json", 
+            "RootItem" : "items/{id}/RootItem.json" 
         }        
     }
 }

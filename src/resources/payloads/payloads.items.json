@@ -1,0 +1,74 @@
+{
+    "ProjectById": {
+        "POST": {
+            "Content": "New Item example for automation",
+            "ItemType": "1",
+            "Checked": "false"
+        },
+        "PUT": {
+            "Checked": "true"
+        }
+    },
+    "Invalid": {
+        "Content": {
+            "Empty": {
+                "Content": ""
+            }
+        },
+        "ProjectID": {
+            "NegativeNumber": {
+                "Content": "Item Automation Test",
+                "ProjectId": "-5"
+            },
+            "DecimalNumber": {
+                "Content": "Item Automation Test",
+                "ProjectId": "5.10"
+            },
+            "Words": {
+                "Content": "Item Automation Test",
+                "ProjectId": "Icon"
+            },
+            "Empty": {
+                "Content": "Item Automation Test",
+                "ProjectId": ""
+            },
+            "NonExistent" :{
+                "Content": "Item Automation Test",
+                "ProjectId": 456
+            }
+            ,
+            "Space" :{
+                "Content": "Item Automation Test",
+                "ProjectId": " "
+            }
+        },
+        "ItemType" : {
+            "NegativeNumber": {
+                "Content": "Item Automation Test",
+                "ProjectId": "-5"
+            },
+            "DecimalNumber": {
+                "Content": "Item Automation Test",
+                "ProjectId": "5.10"
+            },
+            "Words": {
+                "Content": "Item Automation Test",
+                "ProjectId": "Icon"
+            },
+            "Empty": {
+                "Content": "Item Automation Test",
+                "ProjectId": ""
+            },
+            "NonExistent" :{
+                "Content": "Item Automation Test",
+                "ProjectId": 456
+            }
+            ,
+            "Space" :{
+                "Content": "Item Automation Test",
+                "ProjectId": " "
+            }
+
+        }
+    }
+}

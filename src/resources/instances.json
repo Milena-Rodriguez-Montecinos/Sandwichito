@@ -6,10 +6,38 @@
       "password": "aeiou12345"
     }
   },
+  "ValidCredentialsTwo": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-two@email.com",
+      "password": "aeiou12345"
+    }
+  },
+  "ValidCredentialsThree": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-three@email.com",
+      "password": "aeiou12345"
+    }
+  },
   "InvalidCredentials": {
     "baseURL": "https://todo.ly",
     "auth": {
       "username": "bmvclwtcbeqsergdrp@pptrvv.com",
+      "password": "trol123!123456"
+    }
+  },
+  "InvalidEmail": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-invalid@email.com",
+      "password": "aeiou12345"
+    }
+  },
+  "InvalidPassword": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-two@email.com",
       "password": "trol123!123456"
     }
   }
