@@ -17,7 +17,6 @@ describe("smoke test from Filters", () => {
         .then(function (response) {
             expect(response.status).toBe(200);
             expect(response.statusText).toMatch("OK");
-            expect(response.data).not.toEqual(errors.Authentication);
             afterPostId = response.data.Id
         })
         .catch(function (error) {

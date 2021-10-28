@@ -76,5 +76,9 @@
     "TooShortItemName": {
         "ErrorMessage": "Too Short Item Name",
         "ErrorCode": 308
+    },
+    "InvalidFiltersID": {
+        "ErrorMessage": "Invalid Id",
+        "ErrorCode": 301
     }
 }
