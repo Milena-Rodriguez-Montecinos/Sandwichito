@@ -2,7 +2,7 @@ import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json"
 import errors from "../../../src/resources/errors.json"
 import payloadList from "../../../src/resources/payloads/payloads.project.json"
-import logger from "../../../src/utils/logger";
+import logger from "../../../src/utils/logger/logger.projects";
 
 const projectsURI = endpointsList.endpoints.project.projects
 const projectByIdItemsURI = endpointsList.endpoints.project.projectByIdItems

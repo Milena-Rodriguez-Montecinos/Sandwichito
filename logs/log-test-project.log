@@ -1,0 +1,27 @@
+[2021-10-28T10:55:54.737Z] error [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+[32m- Expected  -  2[39m
+[31m+ Received  + 18[39m
+
+[2m  Object {[22m
+[32m-   "ErrorCode": 102,[39m
+[32m-   "ErrorMessage": "Not Authenticated",[39m
+[31m+   "Children": Array [],[39m
+[31m+   "Collapsed": false,[39m
+[31m+   "Content": "My New Project",[39m
+[31m+   "Deleted": true,[39m
+[31m+   "Icon": 4,[39m
+[31m+   "Id": 3953800,[39m
+[31m+   "IsOwnProject": true,[39m
+[31m+   "IsProjectShared": false,[39m
+[31m+   "IsShareApproved": false,[39m
+[31m+   "ItemOrder": 62,[39m
+[31m+   "ItemType": 2,[39m
+[31m+   "ItemsCount": 0,[39m
+[31m+   "LastSyncedDateTime": "/Date(1635418485060)/",[39m
+[31m+   "LastUpdatedDate": "/Date(1635418485047)/",[39m
+[31m+   "ParentId": null,[39m
+[31m+   "ProjectShareOwnerEmail": null,[39m
+[31m+   "ProjectShareOwnerName": null,[39m
+[31m+   "SyncClientCreationId": null,[39m
+[2m  }[22m
