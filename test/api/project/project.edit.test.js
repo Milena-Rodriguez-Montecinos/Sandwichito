@@ -2,6 +2,7 @@ import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json";
 import errors from "../../../src/resources/errors.json";
 import payloadList from "../../../src/resources/payloads/payloads.project.json";
+import logger from "../../../src/utils/logger";
 
 let projectsURI = endpointsList.endpoints.project.projects;
 let projectByIdURI = endpointsList.endpoints.project.projectById;
@@ -21,7 +22,7 @@ describe("Project edit tests", () => {
                 id = response.data.Id;
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
     });
@@ -37,10 +38,10 @@ describe("Project edit tests", () => {
                 expect(response.data).not.toEqual(errors.Authentication);
             })
             .catch(function (error) {
-                console.log(error);
+                logger.error(error);
                 throw error;
             });
-    }, 5000);
+    });
 
     test.skip.each([
         [200, "OK", "NegativeNumber"],
@@ -62,7 +63,7 @@ describe("Project edit tests", () => {
                     expect(response.data).toEqual(errors.InvalidInputData);
                 })
                 .catch(function (error) {
-                    //console.log(error);
+                    logger.error(error);
                     throw error;
                 });
         }
@@ -89,7 +90,7 @@ describe("Project edit tests", () => {
                     expect(response.data).toEqual(errors.InvalidInputData);
                 })
                 .catch(function (error) {
-                    //console.log(error);
+                    logger.error(error);
                     throw error;
                 });
         }
