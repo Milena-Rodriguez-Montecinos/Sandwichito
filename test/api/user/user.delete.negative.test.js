@@ -2,6 +2,7 @@ import HttpRequestManager from '../../../src/common/api/http.request.manager'
 import endpointsList from '../../../src/resources/endpoints.json'
 import payloadList from '../../../src/resources/payloads/payloads.user.json'
 import errors from '../../../src/resources/errors.json'
+import logger from '../../../src/utils/logger/logger.user'
 
 const userURI = endpointsList.endpoints.users.user;
 let userByIdURI = endpointsList.endpoints.users.userById;
@@ -10,7 +11,7 @@ let id = ''
 describe('User GET request negative test', () => {
 
     beforeAll(() => {
-        return HttpRequestManager.makeRequest('POST', userURI, payloadList.Valid.POST.Two, 'user-two')
+        return HttpRequestManager.makeRequest('POST', userURI, payloadList.Valid.POST.Seven, 'user-seven')
         .then(function (response) {
             expect(response.status).toBe(200);
             expect(response.statusText).toBe("OK");
@@ -18,27 +19,27 @@ describe('User GET request negative test', () => {
             id = response.data.Id;
         })
         .catch(function (error) {
-            console.log(error)
+            logger.error(error)
             throw error
         })
-    })
+    }, 20000)
 
     afterAll(() => {
-        return HttpRequestManager.makeRequest('DELETE', userByIdURI.replace("{id}", id), '', 'user-two')
+        return HttpRequestManager.makeRequest('DELETE', userByIdURI.replace("{id}", id), '', 'user-seven')
         .then(function (response) {
             expect(response.status).toBe(200);
             expect(response.statusText).toBe("OK")
             expect(response.data).not.toEqual(errors.Authentication);
         })  
         .catch(function (error) {
-            console.log(error)
+            logger.error(error)
             throw error
         })
-    })
+    }, 20000)
 
     test.each([
         [200, "OK", "invalid-email", "NonExistentAccount"],
-        [200, "OK", "invalid-pass", "Authentication"]        
+        [200, "OK", "invalid-password", "Authentication"]        
     ])("Verify that %i %s status code with error message result when a GET request to the 'user.json' endpoint is executed using an %s", (statusCode, statusTest, credentials, errorKey) => {
         return HttpRequestManager.makeRequest('DELETE', userByIdURI.replace('{id}', id), '', credentials)
         .then(function (response) {
@@ -47,8 +48,8 @@ describe('User GET request negative test', () => {
             expect(response.data).toEqual(errors[errorKey]);
         })
         .catch(function (error) {
-            console.log(error)
+            logger.error(error)
             throw error
         })
-    })
+    }, 20000)
 })

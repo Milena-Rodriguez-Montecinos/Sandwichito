@@ -1,5 +1,6 @@
 import axios from "axios"
 import instances from "../../resources/instances.json"
+import CredentialsManager from "./credentials.manager"
 
 class HttpRequestManager {
    
@@ -13,23 +14,12 @@ class HttpRequestManager {
             case true:
                 instance = axios.create(instances.ValidCredentials);
                 break
-            case 'user-two': 
-                instance = axios.create(instances.ValidCredentialsTwo);
-                break
-            case 'user-three':
-                instance = axios.create(instances.ValidCredentialsThree);
-                break
-            case 'invalid-email':
-                instance = axios.create(instances.InvalidEmail);
-                break    
-            case 'invalid-pass':
-                instance = axios.create(instances.InvalidPassword);
-                break
+            default:
+                instance = axios.create(CredentialsManager.credentials(isAuthValid));
         }
 
         switch(verb) {
             case "GET":
-                //console.log(`${instance.defaults.baseURL}/api/${uri}`);
                 return instance.get(`${instance.defaults.baseURL}/api/${uri}`, instance.defaults.auth)
             case "POST":      
                 return instance.post(`${instance.defaults.baseURL}/api/${uri}`, data ,instance.defaults.auth)          
