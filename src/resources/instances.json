@@ -20,6 +20,34 @@
       "password": "aeiou12345"
     }
   },
+  "ValidCredentialsFour": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-four@email.com",
+      "password": "aeiou12345"
+    }
+  },
+  "ValidCredentialsFive": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-five@email.com",
+      "password": "aeiou12345"
+    }
+  },
+  "ValidCredentialsSix": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-six@email.com",
+      "password": "aeiou12345"
+    }
+  },
+  "ValidCredentialsSeven": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-seven@email.com",
+      "password": "aeiou12345"
+    }
+  },
   "InvalidCredentials": {
     "baseURL": "https://todo.ly",
     "auth": {
@@ -37,7 +65,15 @@
   "InvalidPassword": {
     "baseURL": "https://todo.ly",
     "auth": {
-      "username": "sandwichito-two@email.com",
+      "username": "sandwichito-five@email.com",
+      "password": "trol123!123456"
+    }
+  }
+  ,
+  "InvalidPasswordTwo": {
+    "baseURL": "https://todo.ly",
+    "auth": {
+      "username": "sandwichito-seven@email.com",
       "password": "trol123!123456"
     }
   }

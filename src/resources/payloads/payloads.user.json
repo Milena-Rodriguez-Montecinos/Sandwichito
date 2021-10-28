@@ -15,7 +15,27 @@
                 "Email": "sandwichito-three@email.com",
                 "FullName": "Los sandwichitos mas delis de AT-14 - Three",
                 "Password": "aeiou12345"
-            }            
+            },
+            "Four": {
+                "Email": "sandwichito-four@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14 - Three",
+                "Password": "aeiou12345"
+            },
+            "Five": {
+                "Email": "sandwichito-five@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14 - Three",
+                "Password": "aeiou12345"
+            },
+            "Six": {
+                "Email": "sandwichito-six@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14 - Three",
+                "Password": "aeiou12345"
+            } ,
+            "Seven": {
+                "Email": "sandwichito-seven@email.com",
+                "FullName": "Los sandwichitos mas delis de AT-14 - Three",
+                "Password": "aeiou12345"
+            }                                   
         },
         "PUT": {
             "FullName": "Los sandwichitos del AT-14",
@@ -30,17 +50,17 @@
                 "Password": "aeiou12345"
             },
             "NoFullName": {
-                "Email": "sandwichito-two@email.com",                
+                "Email": "sandwichito-four@email.com",                
                 "Password": "aeiou12345"
             },
             "NoPassword": {
-                "Email": "sandwichito-two@email.com",
+                "Email": "sandwichito-four@email.com",
                 "FullName": "Los sandwichitos mas delis de AT-14"
             }
         },
         "PUT": {
             "InvalidEmail": {
-                "Email": "sandwichito-two_email.com"
+                "Email": "sandwichito-six_email.com"
             },
             "EmptyEmail": {
                 "Email": ""
