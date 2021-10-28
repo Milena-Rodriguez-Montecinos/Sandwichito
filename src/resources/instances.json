@@ -2,7 +2,7 @@
   "ValidCredentials": {
     "baseURL": "https://todo.ly",
     "auth": {
-      "username": "sandwichito@email.com",
+      "username": "sandwichito@gmail.com",
       "password": "aeiou12345"
     }
   },

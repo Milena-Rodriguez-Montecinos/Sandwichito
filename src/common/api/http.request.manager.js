@@ -29,6 +29,7 @@ class HttpRequestManager {
 
         switch(verb) {
             case "GET":
+                //console.log(`${instance.defaults.baseURL}/api/${uri}`);
                 return instance.get(`${instance.defaults.baseURL}/api/${uri}`, instance.defaults.auth)
             case "POST":      
                 return instance.post(`${instance.defaults.baseURL}/api/${uri}`, data ,instance.defaults.auth)          
@@ -41,3 +42,4 @@ class HttpRequestManager {
 }
 
 export default HttpRequestManager
+

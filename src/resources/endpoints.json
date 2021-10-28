@@ -2,7 +2,9 @@
     "endpoints": {
         "project": {
             "projects": "projects.json",
-            "projectById": "projects/{id}.json"
+            "projectById": "projects/{id}.json",
+            "projectByIdItems": "projects/{id}/items.json",
+            "projectByIdDoneItems": "projects/{id}/doneitems.json"
         },
         "users": {
             "user": "user.json",

@@ -3,6 +3,52 @@
         "ErrorMessage": "Not Authenticated",
         "ErrorCode": 102
     },
+    "ErrorCode":{
+        "InvalidId": {
+            "ErrorMessage": "Invalid Id",
+            "ErrorCode": 301            
+        },
+        "InvalidInputData": {
+            "ErrorMessage": "Invalid input Data",
+            "ErrorCode": 302            
+        },
+        "InvalidParentItemId": {
+            "ErrorMessage": "Invalid Parent Item Id",
+            "ErrorCode": 303                        
+        },
+        "InvalidProjectId": {
+            "ErrorMessage": "Invalid Project Id",
+            "ErrorCode": 304                        
+        },
+        "TooShortProjectName": {
+            "ErrorMessage": "Too Short Project Name",
+            "ErrorCode": 305                        
+        },
+        "InvalidFullName": {
+            "ErrorMessage": "Invalid FullName",
+            "ErrorCode": 306                        
+        },
+        "InvalidEmailAddress": {
+            "ErrorMessage": "Invalid Email Address",
+            "ErrorCode": 307                        
+        },
+        "TooShortItemName": {
+            "ErrorMessage": "Too Short Item Name",
+            "ErrorCode": 308                        
+        },
+        "NoAccessToItem": {
+            "ErrorMessage": "You don't have access to this Item",
+            "ErrorCode": 309                                    
+        },
+        "NoAccessToParentProject":{
+            "ErrorMessage": "You don't have access to this ParentProject",
+            "ErrorCode": 401                                                
+        },
+        "NoAccessToProject":{
+            "ErrorMessage": "You don't have access to this Project",
+            "ErrorCode": 402                                                
+        }         
+    },
     "InvalidInputData": {
         "ErrorMessage": "Invalid input Data",
         "ErrorCode": 302
@@ -22,7 +68,7 @@
     "NonExistentAccount": {
         "ErrorMessage": "Account doesn't exist",
         "ErrorCode": 105
-    }    
+    },    
     "InvalidProjectId": {
         "ErrorMessage": "Invalid Project Id",
         "ErrorCode": 304
