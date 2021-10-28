@@ -52,7 +52,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
         ${200}     | ${"OK"}    | ${"Space"}          | ${"just a space"}
         ${200}     | ${"OK"}    | ${"DecimalNumber"}  | ${"a decimal"}
     `(
-        "Verify that I get a error status code as a response body when a PUT request to the 'items/[id].json' is sent with $statusTitle value in 'ItemType' variable",
+        "Verify that I get an error status code as a response body when a PUT request to the 'items/[id].json' is sent with $statusTitle value in 'ItemType' variable",
         ({ statusCode, statusText, key }) => {
             return HttpRequestManager.makeRequest(
                 "PUT",

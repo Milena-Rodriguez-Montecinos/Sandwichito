@@ -60,7 +60,7 @@ describe("smoke test from Items", () => {
             });
     }, 20000);
 
-    test("Verify if an item is created when a POST request to the 'items/items.json' is sent", () => {
+    test("Verify that a 200 ok status code result is given back when an item is created with a POST request to the 'items/items.json'", () => {
         return HttpRequestManager.makeRequest(
             "POST",
             itemsURI,
@@ -78,7 +78,7 @@ describe("smoke test from Items", () => {
             });
     }, 20000);
 
-    test("APT-004 Verify that an item is changed when a PUT request to the 'items/[id].json' is sent", () => {
+    test("Verify that a 200 ok status code result is given back when a PUT request to the 'items/[id].json' is sent", () => {
         return HttpRequestManager.makeRequest(
             "PUT",
             itemsURIID.replace("{id}", beforePostId),
@@ -95,7 +95,7 @@ describe("smoke test from Items", () => {
             });
     }, 20000);
 
-    test("Verify that an item is deleted when a DELETE request to the 'items/[id].son' is sent", () => {
+    test("Verify that a 200 ok status code result is given back when a DELETE request to the 'items/[id].son' is sent", () => {
         return HttpRequestManager.makeRequest(
             "DELETE",
             itemsURIID.replace("{id}", beforePostId)
