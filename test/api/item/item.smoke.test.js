@@ -2,7 +2,7 @@ import HttpRequestManager from "../../../src/common/api/http.request.manager";
 import endpointsList from "../../../src/resources/endpoints.json";
 import errors from "../../../src/resources/errors.json";
 import payload from "../../../src/resources/payloads/payloads.items.json";
-import logger from "../../../src/utils/logger";
+import logger from "../../../src/utils/logger/logger.items"
 
 const itemsURIID = endpointsList.endpoints.item.itemsById;
 const itemsURI = endpointsList.endpoints.item.items;
@@ -60,7 +60,7 @@ describe("smoke test from Items", () => {
             });
     }, 20000);
 
-    test("Verify if an item is created when a POST request to the 'items/items.json' is sent", () => {
+    test("Verify that a 200 ok status code result is given back when an item is created with a POST request to the 'items/items.json'", () => {
         return HttpRequestManager.makeRequest(
             "POST",
             itemsURI,
@@ -78,7 +78,7 @@ describe("smoke test from Items", () => {
             });
     }, 20000);
 
-    test("APT-004 Verify that an item is changed when a PUT request to the 'items/[id].json' is sent", () => {
+    test("Verify that a 200 ok status code result is given back when a PUT request to the 'items/[id].json' is sent", () => {
         return HttpRequestManager.makeRequest(
             "PUT",
             itemsURIID.replace("{id}", beforePostId),
@@ -95,7 +95,7 @@ describe("smoke test from Items", () => {
             });
     }, 20000);
 
-    test("Verify that an item is deleted when a DELETE request to the 'items/[id].son' is sent", () => {
+    test("Verify that a 200 ok status code result is given back when a DELETE request to the 'items/[id].son' is sent", () => {
         return HttpRequestManager.makeRequest(
             "DELETE",
             itemsURIID.replace("{id}", beforePostId)
@@ -112,7 +112,7 @@ describe("smoke test from Items", () => {
     }, 20000);
 
     test("Verify that a 200 OK status code result is given back when a GET Root Item By child Id request to the 'items/items.json' is sent", () => {
-        return HttpRequestManager.makeRequest("GET", rootItem)
+        return HttpRequestManager.makeRequest("GET", rootItem.replace("{id}",afterPostId))
             .then(function (response) {
                 expect(response.status).toBe(200);
                 expect(response.statusText).toMatch("OK");
@@ -125,7 +125,7 @@ describe("smoke test from Items", () => {
     }, 20000);
 
     test("Verify that a 200 OK status code result is given back when a GET Done Root Item By child Id request to the 'items/items.json' is sent", () => {
-        return HttpRequestManager.makeRequest("GET", doneRootItem)
+        return HttpRequestManager.makeRequest("GET", doneRootItem.replace("{id}",afterPostId))
             .then(function (response) {
                 expect(response.status).toBe(200);
                 expect(response.statusText).toMatch("OK");
