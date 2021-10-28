@@ -46,7 +46,7 @@ describe("Negative tests of Items feature from Todo.ly website", () => {
         }
     }, 20000);
 
-    test("Verify that a non authorized user cannot create an Item", () => {
+    test("Verify that get an error status code in the body response when a non authorized user cannot create an Item", () => {
         return HttpRequestManager.makeRequest(
             "POST",
             itemsURI,
