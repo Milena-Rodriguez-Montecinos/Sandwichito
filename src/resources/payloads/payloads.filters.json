@@ -1,0 +1,12 @@
+{
+    "ProjectById": {
+        "GET": {
+            "Id": 0,
+            "Content": "Inbox",
+            "ItemsCount": 1,
+            "Icon": 15,
+            "ItemType": 4,
+            "Children": []
+        }
+    }
+}

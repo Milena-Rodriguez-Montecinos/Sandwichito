@@ -15,6 +15,10 @@
             "itemsById" : "items/{id}.json",
             "DoneRootItem" : "items/{id}/DoneRootItem.json", 
             "RootItem" : "items/{id}/RootItem.json" 
-        }        
+        },              
+        "filter" : {
+            "filters": "filters.json",
+            "filtersByID" : "filters/{id}.json"
+        }      
     }
 }
