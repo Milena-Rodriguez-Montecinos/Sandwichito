@@ -5,12 +5,11 @@ import payload from "../../../src/resources/payloads/payloads.filters.json";
 import logger from "../../../src/utils/logger"
 
 const filtersURI = endpointsList.endpoints.filter.filters;
-const filtersByID = endpointsList.endpoints.filter.filtersByID
 let afterPostId = "";
 
 describe("smoke test from Filters", () => {
 
-    test("Verify returns the list of Done Items within the given filter when a GET request to the 'filter/filters.json' is sent", () => {
+    test("Verify returns the list of Items within the given filter when a GET request to the 'filter/filters.json' is sent", () => {
         return HttpRequestManager.makeRequest(
             "GET",
             filtersURI
