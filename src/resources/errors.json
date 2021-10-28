@@ -3,10 +3,6 @@
         "ErrorMessage": "Not Authenticated",
         "ErrorCode": 102
     },
-    "InvalidFiltersId": {
-        "ErrorMessage": "Invalid Id",
-        "ErrorCode": 301
-    },
     "InvalidInputData": {
         "ErrorMessage": "Invalid input Data",
         "ErrorCode": 302
